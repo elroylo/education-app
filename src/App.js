@@ -1,32 +1,23 @@
 import './App.css';
 import React from 'react';
-import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useMoralis } from 'react-moralis'
-import NavbarComponent from './components/Navbar/Navbar.component';
+import Navbar from './components/Navbar';
+import HomePage from './pages/Home'
+import PostPage from './pages/Posts'
+import SpecPosts from './pages/SpecPosts/SpecPosts.page'
 
 export default function App() {
 
   return (
-
-      <div>
-      HELLO WORLD
-        <NavbarComponent />
-
-      </div>
-
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} exact />
+        <Route path="/posts" element={<PostPage />} />
+        <Route path="/post/:id" element={<SpecPosts />} />
+      </Routes>
+    </Router>
   );
-}
-
-function Home() {
-  return <h2>Home</h2>;
-}
-
-function Posts() {
-  return <h2>Posts</h2>;
-}
-
-function Post() {
-  return <h2>post</h2>;
 }
 
 {/* <Routes>
