@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
 function PostPage() {
+
+  let [posts, setPosts] = useState([])
   async function getPosts() {
     fetch('https://dummyjson.com/posts')
       .then(res => res.json())
-      .then(res=> console.log(response))
+      .then(resp => setPosts(resp))
   }
 
   useEffect(() => {
@@ -13,6 +15,7 @@ function PostPage() {
 
   return (
     <div>
+      {JSON.stringify(posts)}
     </div>
   )
 }
