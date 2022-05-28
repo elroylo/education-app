@@ -5,7 +5,7 @@ import { useMoralis } from 'react-moralis'
 import Navbar from './components/Navbar';
 import HomePage from './pages/Home'
 import PostPage from './pages/Posts'
-import SpecPosts from './pages/SpecPosts/SpecPosts.page'
+import SpecPosts from './pages/SpecPosts'
 
 export default function App() {
 
