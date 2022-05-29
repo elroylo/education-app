@@ -5,7 +5,10 @@ import { useMoralis } from 'react-moralis'
 import Navbar from './components/Navbar';
 import HomePage from './pages/Home'
 import PostPage from './pages/Posts'
-import SpecPosts from './pages/SpecPosts'
+import CreatePost from './pages/CreatePost';
+import BlogPage from './pages/Blog'
+import SpecBlog from './pages/SpecBlog'
+import CreateBlog from './pages/CreateBlog'
 
 export default function App() {
 
@@ -14,7 +17,10 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} exact />
         <Route path="/posts" element={<PostPage />} />
-        <Route path="/post/:id" element={<SpecPosts />} />
+        <Route path="/post/create" element={<CreatePost />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blogs/:id" element={<SpecBlog />} />
+        <Route path="/blog/create" element={<CreateBlog />} exact />
       </Routes>
     </Router>
   );

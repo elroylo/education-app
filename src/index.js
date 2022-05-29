@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -8,9 +8,11 @@ import { SERVER_URL, APP_ID } from './constants/moralis.constants'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <MoralisProvider serverUrl={SERVER_URL} appId={APP_ID}>
-    <App />
+  <StrictMode>
+    <MoralisProvider serverUrl={SERVER_URL} appId={APP_ID}>
+      <App />
     </MoralisProvider>
+  </StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

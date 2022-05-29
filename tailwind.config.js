@@ -3,7 +3,7 @@ module.exports = {
     themes: [
       {
         main: {
-          "primary": "#3498eb",
+          "primary": "#85b3f4",
           "secondary": "#34eb86",
           "accent": "#37CDBE",
           "neutral": "#3D4451",
@@ -13,6 +13,7 @@ module.exports = {
           "warning": "#FBBD23",
           "error": "#F87272",
         },
+
       },
     ],
   },
